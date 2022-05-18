@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Content} from './models/content'
 import { List } from './models/list';
 
 @Component({
@@ -8,9 +9,11 @@ import { List } from './models/list';
 })
 export class AppComponent {
   title = 'A_Patel_Stockmarket';
+
 }
 
 
+ 
 
 
 
