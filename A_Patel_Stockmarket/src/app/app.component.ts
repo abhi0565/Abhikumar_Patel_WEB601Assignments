@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { List } from './models/list';
 
 @Component({
   selector: 'app-root',
@@ -8,3 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'A_Patel_Stockmarket';
 }
+
+
+
+
+
+
+
