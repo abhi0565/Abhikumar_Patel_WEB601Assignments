@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {Content} from './models/content'
+import {Content} from './models/content';
+import{ContentListComponent} from './content-list/content-list.component'
 
 
 @Component({
