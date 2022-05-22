@@ -7,10 +7,10 @@ import { Content } from '../models/content';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit {
-  data:Content[];
+  stockdata:Content[];
 
   constructor() { 
-    this.data = [{
+    this.stockdata = [{
       id: 0,
       title: 'TATA MOTORS',
       body: "automobile",

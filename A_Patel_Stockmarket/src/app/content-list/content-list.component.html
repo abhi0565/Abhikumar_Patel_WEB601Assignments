@@ -1,1 +1,12 @@
 <p>content-list works!</p>
+
+<div>
+    <app-content-card *ngFor="let item of stockdata; index as i; first as isFirst" [contentItem]="item"
+      class="chess-player-{{i}}" [class.is-first]="isFirst">
+    </app-content-card>
+  </div>
+
+
+
+
+
