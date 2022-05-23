@@ -5,12 +5,29 @@
     margin: 8px auto;
     border: 1px solid #000;
     padding: 8px;
-  
+
+    &.is-even {
+        // & means this selector is applied directly to :host
+        background-color: gray;
+      }
+    &.is-odd{
+        background-color: white;
+    }
 
 img{
     width: 25em;
+    border: 5px solid black;
 }
 .type{
     padding: 10px;
+    background-color: brown;
+}
+.author{
+    padding: 10px;
+    background-color: goldenrod;
+}
+.hastags{
+   padding: 10px;
+   background-color: cadetblue;
 }
 }
