@@ -1,4 +1,11 @@
 <p>content-card works!</p>
 <h2>
     {{ contentItem?.title }}
-</h2>
+  </h2>
+  <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
+  <img *ngIf="contentItem" [src]="contentItem.imagelink">
+  <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">{{contentItem?.body}}</p>
+  <ng-template #elseBlockNameIsWhateverYouWant>
+    <p class="not-found">No body content found</p>
+  </ng-template>
+  <div class="type">{{contentItem?.type}}</div>
