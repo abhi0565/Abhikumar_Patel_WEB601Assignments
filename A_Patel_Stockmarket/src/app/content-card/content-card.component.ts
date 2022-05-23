@@ -19,6 +19,12 @@ export class ContentCardComponent implements OnInit {
   get items():Content[] {
     return this._items;
   }
+    myfun(){
+        console.log(this.contentItem?.id);
+       console.log(this.contentItem?.author);
+      
+  }
   ngOnInit(): void {
   }
+
 }
