@@ -9,6 +9,7 @@ import{ContentListComponent} from './content-list/content-list.component'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title = 'A_Patel_Stockmarket';
  
 }
 
