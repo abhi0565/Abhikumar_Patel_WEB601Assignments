@@ -40,13 +40,38 @@ export class ContentListComponent implements OnInit {
       body: "HDFC",
       author: "abhi patel",
       imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
-      type: "HDFC",
+      type: "bank",
       hashtags: ["HDFC"]
+    },{
+      id: 4,
+      title: 'SBI',
+      body: "SBI",
+      author: "state bank of india",
+      imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
+      type: "bank",
+      hashtags: ["sbi"]
+    },{
+      id: 5,
+      title: 'ITC',
+      body: "ITC",
+      author: "indian tobbaco company",
+      imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
+      type: "FMCG",
+      hashtags: ["ITC"]
+    },{
+      id: 6,
+      title: 'D-Mart',
+      body: "D-mart",
+      author: "Radha krishna damani",
+      imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
+      type: "FMCG",
+      hashtags: ["D-Mart"]
     }
     ]
   }
 
   ngOnInit(): void {
   }
-
+  
 }
+
