@@ -4,7 +4,7 @@ import { Content } from '../models/content';
 @Component({
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
-  styleUrls: ['../app.component.scss']
+  styleUrls: ['./content-card.component.scss']
 })
 export class ContentCardComponent implements OnInit {
   @Input() contentItem?: Content;

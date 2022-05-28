@@ -47,15 +47,15 @@ export class ContentListComponent implements OnInit {
       title: 'SBI',
       body: "SBI",
       author: "state bank of india",
-      imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
+      imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEP2Udx6t1uC_8MnekJVH62yLE9oGEyFPQg&usqp=CAU",
       type: "bank",
-      hashtags: ["sbi"]
+      hashtags: ["SBI"]
     },{
       id: 5,
       title: 'ITC',
       body: "ITC",
       author: "indian tobbaco company",
-      imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
+      imagelink: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/ITC_Limited_Logo.svg/1200px-ITC_Limited_Logo.svg.png",
       type: "FMCG",
       hashtags: ["ITC"]
     },{
@@ -63,7 +63,7 @@ export class ContentListComponent implements OnInit {
       title: 'D-Mart',
       body: "D-mart",
       author: "Radha krishna damani",
-      imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
+      imagelink: "https://m.economictimes.com/thumb/msid-69749642,width-1200,height-900,resizemode-4,imgsize-363172/7.jpg",
       type: "FMCG",
       hashtags: ["D-Mart"]
     }
