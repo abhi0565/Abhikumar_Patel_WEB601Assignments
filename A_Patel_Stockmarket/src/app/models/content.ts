@@ -6,7 +6,7 @@ export interface Content {
     body? : string;
     author : string;
     imagelink? : string;
-    type : string;
+    type?: string;
     hashtags: string[];
 
 

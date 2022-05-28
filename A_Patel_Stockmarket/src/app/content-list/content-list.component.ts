@@ -24,7 +24,7 @@ export class ContentListComponent implements OnInit {
       body: "all sector brand",
       author: "Mukesh Ambani",
       imagelink: "https://englishtribuneimages.blob.core.windows.net/gallary-content/2022/5/2022_5$largeimg_2129243640.jpg",
-      type: "all",
+     // type: "all",
       hashtags: ["Ambani"]
     },{
       id: 2,
