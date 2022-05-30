@@ -7,6 +7,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { StocksPipe } from './stocks.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,

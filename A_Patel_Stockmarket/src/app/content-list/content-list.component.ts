@@ -64,7 +64,7 @@ export class ContentListComponent implements OnInit {
       body: "D-mart",
       author: "Radha krishna damani",
       imagelink: "https://m.economictimes.com/thumb/msid-69749642,width-1200,height-900,resizemode-4,imgsize-363172/7.jpg",
-      type: "FMCG",
+     // type: "FMCG",
       hashtags: ["D-Mart"]
     }
     ]

@@ -7,10 +7,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StocksPipe implements PipeTransform {
 
-  transform(stockdata:Content[]):Content[]{
+  transform(stockdata:Content[]):any{
+    
       return  stockdata.filter(individualstock =>{
-        return !!individualstock.type?.length;
+        return !individualstock.type?.length 
+         || individualstock.type == "all" || individualstock.type =="bank" || individualstock.type =="FMCG";
+
       })
+      
 
   }
   
