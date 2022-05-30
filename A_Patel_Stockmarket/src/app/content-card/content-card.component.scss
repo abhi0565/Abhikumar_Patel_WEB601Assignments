@@ -13,6 +13,22 @@
     &.is-odd{
         background-color: white;
     }
+    &.all{
+        background-color: #000;
+        color: blue;
+    }
+    &.bank{
+        background-color: rebeccapurple;
+        color: red;
+    }
+    &.fmcg{
+        background-color: yellow;
+        color: bisque;
+    }
+    &.not{
+        background-color: green;
+        color: white;
+    }
 
 img{
     width: 25em;
@@ -30,4 +46,5 @@ img{
    padding: 10px;
    background-color: cadetblue;
 }
+
 }

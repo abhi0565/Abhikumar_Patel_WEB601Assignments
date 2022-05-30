@@ -2,21 +2,21 @@
  <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
     <app-content-card *ngIf="item.type=='all'" [contentItem]="item" 
-    class="chess-player-{{i}}" [class.is-odd]="odd" [class.is-even]="even">
+    class="chess-player-{{i}}" class="all">
   </app-content-card>
 
   </div>
   <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
     <app-content-card *ngIf="item.type=='bank'" [contentItem]="item" 
-    class="chess-player-{{i}}" [class.is-odd]="odd" [class.is-even]="even">
+    class="chess-player-{{i}}" class="bank">
   </app-content-card>
 
   </div>
   <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
     <app-content-card *ngIf="item.type=='FMCG'" [contentItem]="item" 
-    class="chess-player-{{i}}" [class.is-odd]="odd" [class.is-even]="even">
+    class="chess-player-{{i}}" class="fmcg">
   </app-content-card>
 
   </div>
@@ -24,7 +24,7 @@
   <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
     <app-content-card *ngIf="! item.type" [contentItem]="item" 
-    class="chess-player-{{i}}" [class.is-odd]="odd" [class.is-even]="even">
+    class="chess-player-{{i}}" class="not">
   </app-content-card>
 
   </div>
