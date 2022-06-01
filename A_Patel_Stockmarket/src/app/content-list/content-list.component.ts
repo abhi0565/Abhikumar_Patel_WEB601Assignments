@@ -81,19 +81,35 @@ export class ContentListComponent implements OnInit {
   
   clickEvent(inputvalue: any): any {
   
-
+    // let i = 0;
     //  return  console.log(inputvalue); 
-    this.stockdata.forEach (author => {
-     let abj =  <HTMLInputElement>document.getElementById('aut');
+    for(let i = 0;  i < this.stockdata.length; i++) {
+     console.log(this.stockdata[i].author);
+
       // console.log(author.author)
-      if(author.author === inputvalue){
+      // console.log(inputvalue);
+      if(this.stockdata[i].author == inputvalue){
+     let abj =  <HTMLInputElement>document.getElementById('aut');
        //return 'we found the item with other';
-    return   abj.innerHTML = "hello";
+       abj.innerHTML = 'we found the item with other';
       }
-      else{
-        return   abj.innerHTML = 'we can not find the other';
-      }
-    });
+      //   else{
+      //  let abj =  <HTMLInputElement>document.getElementById('aut');
+
+      //        abj.innerHTML = 'we can not find the other';
+      //   }
+    
+
+    }
+    let abj =  <HTMLInputElement>document.getElementById('aut');
+    if(!abj.innerHTML){
+             abj.innerHTML = 'we can not find the other';
+
+    }
+    
+    
+
+
 
 //     if(inputvalue == this.stockdata.author){
 //       console.log("hello");
