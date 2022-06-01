@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { TmplAstBoundText } from '@angular/compiler';
+import { Component, OnInit, Optional } from '@angular/core';
+import { filter } from 'rxjs';
 import { Content } from '../models/content';
 
 @Component({
@@ -8,7 +10,7 @@ import { Content } from '../models/content';
 })
 export class ContentListComponent implements OnInit {
   stockdata:Content[];
-
+  public  inputvalue?: Optional;
   constructor() { 
     this.stockdata = [{
       id: 0,
@@ -38,7 +40,7 @@ export class ContentListComponent implements OnInit {
       id: 3,
       title: 'HDFC',
       body: "HDFC",
-      author: "abhi patel",
+      author: "abhi",
       imagelink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4WNTgpKO7eK2BzuuXKmG7we8qy5rY5lA6VQ&usqp=CAU",
       type: "bank",
       hashtags: ["HDFC"]
@@ -68,10 +70,35 @@ export class ContentListComponent implements OnInit {
       hashtags: ["D-Mart"]
     }
     ]
+    this.inputvalue ="";
   }
 
   ngOnInit(): void {
-  }
-  
-}
+    
 
+  }
+
+  
+  clickEvent(inputvalue: any): any {
+  
+
+    //  return  console.log(inputvalue); 
+    this.stockdata.forEach (author => {
+     let abj =  <HTMLInputElement>document.getElementById('aut');
+      // console.log(author.author)
+      if(author.author === inputvalue){
+       //return 'we found the item with other';
+    return   abj.innerHTML = "hello";
+      }
+      else{
+        return   abj.innerHTML = 'we can not find the other';
+      }
+    });
+
+//     if(inputvalue == this.stockdata.author){
+//       console.log("hello");
+// }
+  
+  }
+
+}

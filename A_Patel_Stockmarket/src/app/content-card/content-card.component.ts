@@ -10,10 +10,12 @@ export class ContentCardComponent implements OnInit {
   @Input() contentItem?: Content;
   static contentCount = 0;
   private _items: Content[];
+  public  inputvalue : string;
 
   constructor() {
     
     this._items = []; // initialize arra
+    this.inputvalue ="hello";
    }
 
   get items():Content[] {
@@ -24,7 +26,12 @@ export class ContentCardComponent implements OnInit {
        console.log(this.contentItem?.author);
       
   }
+
+  clickEvent(): void {
+    console.log(this.contentItem?.author);
+  }
   ngOnInit(): void {
   }
+
 
 }

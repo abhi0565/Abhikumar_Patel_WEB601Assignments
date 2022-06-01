@@ -1,4 +1,25 @@
 
+
+
+<input type="text" [(ngModel)] = "inputvalue" />
+<button (click)="clickEvent(inputvalue)">Click me!</button>
+<div class="aut" id="aut"></div> 
+  
+
+<!-- {{ inputvalue}} -->
+<!-- <div *ngFor="let item of (stockdata | filter); index as i; first as isFirst; ">
+  
+  <app-content-card  *ngIf="item.author" [contentItem]="item" 
+  class="chess-player-{{i}}" class="not">
+  {{ item.author}}
+  <div> hello</div>
+  </app-content-card >
+</div> -->
+
+
+
+
+
  <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
     <app-content-card *ngIf="item.type=='all'" [contentItem]="item" 
@@ -28,6 +49,8 @@
   </app-content-card>
 
   </div>
+
+
 
 
 
