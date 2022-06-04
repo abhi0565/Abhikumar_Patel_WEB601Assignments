@@ -17,7 +17,7 @@ export class ContentListComponent implements OnInit {
       title: 'TATA MOTORS',
       body: "automobile",
       author: "Ratan Tata",
-      imagelink: "https://m.economictimes.com/thumb/msid-91550659,width-1200,height-900,resizemode-4,imgsize-56418/tata-motors.jpg",
+     // imagelink: "https://m.economictimes.com/thumb/msid-91550659,width-1200,height-900,resizemode-4,imgsize-56418/tata-motors.jpg",
       type: "auto",
       hashtags: ["tata", "auto", "nano"]
     },{

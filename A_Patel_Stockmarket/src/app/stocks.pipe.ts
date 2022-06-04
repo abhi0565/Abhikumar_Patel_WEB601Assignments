@@ -11,7 +11,7 @@ export class StocksPipe implements PipeTransform {
     
       return  stockdata.filter(individualstock =>{
         return !individualstock.type?.length 
-         || individualstock.type == "all" || individualstock.type =="bank" || individualstock.type =="FMCG";
+         || individualstock.type == "all" || individualstock.type =="bank" || individualstock.type =="FMCG" || individualstock.type == "auto";
 
       })
       

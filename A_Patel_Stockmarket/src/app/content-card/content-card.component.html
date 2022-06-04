@@ -6,13 +6,19 @@
     {{ contentItem?.title }}
   </h2>
   <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
-  <img *ngIf="contentItem && contentItem.imagelink else elseBlockNameIsWhateverYouWant" [src]="contentItem.imagelink" (click)="myfun()">
+  <img *ngIf="contentItem && contentItem.imagelink else elseBlock" [src]="contentItem.imagelink" (click)="myfun()">
   <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">{{contentItem?.body}}</p>
 
   <div class="type"  *ngIf="contentItem && contentItem.type else elseBlockNameIsWhateverYouWant">{{contentItem?.type}}</div>
   <div class="author"  *ngIf="contentItem && contentItem.author else elseBlockNameIsWhateverYouWant">{{contentItem?.author}}</div>
   <div class="hastags"  *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant">{{contentItem?.hashtags}}</div>
 
+  <ng-template #elseBlock>
+    <!-- <p class="not-found"></p> -->
+    <!-- <img src="https://images.newindianexpress.com/uploads/user/imagelibrary/2021/9/6/w900X450/Bombay_Stock_exchange-PTI.jpg?w=400&dpr=2.6" alt=""> -->
+  <img [src]="'assets/images/stockmarket.jpg'" alt="">
+  </ng-template>
+
   <ng-template #elseBlockNameIsWhateverYouWant>
-    <p class="not-found">No body content found</p>
+    <p> not found</p>
   </ng-template>

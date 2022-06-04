@@ -22,6 +22,14 @@
 
  <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
+    <app-content-card *ngIf="item.type=='auto'" [contentItem]="item" 
+    class="chess-player-{{i}}" class="all">
+  </app-content-card>
+
+  </div>
+
+ <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
+
     <app-content-card *ngIf="item.type=='all'" [contentItem]="item" 
     class="chess-player-{{i}}" class="all">
   </app-content-card>
