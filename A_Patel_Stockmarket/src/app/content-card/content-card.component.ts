@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { Content } from '../models/content';
+import { HighlightImportantDataDirective } from '../highlight-important-data.directive';
 
 @Component({
   selector: 'app-content-card',
