@@ -2,19 +2,19 @@
 <button  clickEvent()>Click me!</button> -->
 
 
-<h2 *ngIf="contentItem && contentItem.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData>
+<h2 *ngIf="contentItem && contentItem.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData >
     {{ contentItem?.title }}
   </h2>
   <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
   <img *ngIf="contentItem && contentItem.imagelink else elseBlock" [src]="contentItem.imagelink" (click)="myfun()">
   <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">{{contentItem?.body}}</p>
 
-  <div class="type"  *ngIf="contentItem && contentItem.type else elseBlockNameIsWhateverYouWant" appHighlightImportantData>{{contentItem?.type}}</div>
+  <div class="type"  *ngIf="contentItem && contentItem.type else elseBlockNameIsWhateverYouWant" appHighlightImportantData   [highlightColor]="'2px solid black'" >{{contentItem?.type}}</div>
   <div class="author"  *ngIf="contentItem && contentItem.author else elseBlockNameIsWhateverYouWant">{{contentItem?.author}}</div>
  <!-- <div class="hastags"  *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant" appHighlightImportantData>{{contentItem?.hashtags}}</div> -->
 
  <div class="hashtags" *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant">
-  <span *ngFor="let hashtag of contentItem.hashtags" appHighlightImportantData>
+  <span *ngFor="let hashtag of contentItem.hashtags" appHighlightImportantData >
     #{{ hashtag }}
   </span>
   <!-- <span>{{ chessPlayer.hashtags.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->
