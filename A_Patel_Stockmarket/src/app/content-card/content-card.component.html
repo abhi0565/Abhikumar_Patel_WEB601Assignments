@@ -14,7 +14,7 @@
  <!-- <div class="hastags"  *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant" appHighlightImportantData>{{contentItem?.hashtags}}</div> -->
 
  <div class="hashtags" *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant">
-  <span *ngFor="let hashtag of contentItem.hashtags" appHighlightImportantData >
+  <span *ngFor="let hashtag of contentItem.hashtags" appHighlightImportantData [textcolor]="'orange'" >
     #{{ hashtag }}
   </span>
   <!-- <span>{{ chessPlayer.hashtags.replace(cp => "<span>" + cp + "</span>").join(" ")}}</span> -->

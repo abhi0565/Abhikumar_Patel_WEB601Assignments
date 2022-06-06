@@ -6,8 +6,12 @@ import {Directive, ElementRef, HostBinding, HostListener, Input } from '@angular
 export class HighlightImportantDataDirective {
 
   private defaultColor:string="";  
-  @Input() highlightColor:string="";  
+  @Input() highlightColor:string=""; 
+   
   @Input()color:string="";
+
+  //private defaulttextcolor:string="";
+  @Input() textcolor:string="";
 
 
   private isHighlighted: boolean = false;
@@ -38,37 +42,22 @@ export class HighlightImportantDataDirective {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
    
 @HostBinding('style.border') border:string=this.defaultColor;  
+@HostBinding('style.color') tagcolor:string=this.defaultColor; 
  
   // constructor( private eleRef:ElementRef){}  
   
   @HostListener('mouseover') mouseover(eventData:Event){  
       this.border=this.highlightColor;  
+      this.tagcolor=this.textcolor;
   
   }  
- 
   @HostListener('mouseleave') mouseleave(eventData:Event){  
       this.border=this.defaultColor;  
+      this.tagcolor=this.defaultColor;
       //this.eleRef.nativeElement.style.color="Black";  
   } 
-
-
-
-
 
 
 
