@@ -2,7 +2,7 @@
 <button  clickEvent()>Click me!</button> -->
 
 
-<h2 *ngIf="contentItem && contentItem.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData >
+<h2 *ngIf="contentItem && contentItem.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData  [color]="'pink'">
     {{ contentItem?.title }}
   </h2>
   <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->

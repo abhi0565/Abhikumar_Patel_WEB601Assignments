@@ -5,22 +5,73 @@ import {Directive, ElementRef, HostBinding, HostListener, Input } from '@angular
 })
 export class HighlightImportantDataDirective {
 
-  @Input() defaultColor:string="";  
+  private defaultColor:string="";  
   @Input() highlightColor:string="";  
+  @Input()color:string="";
+
+
+  private isHighlighted: boolean = false;
+  private initialColour: string;
+ // private initialTextColor: string;
+
+
+
+  @HostBinding('style.backgroundColor')
+  get backgroundColour() {
+    return this.isHighlighted ? this.color || "" :
+      this.initialColour;
+  }
+  @HostBinding('style.color')
+  get textColour() {
+    return this.isHighlighted;
+  }
+
+
+  
+  constructor(private elm: ElementRef) {
+    this.initialColour = this.elm.nativeElement.style.backgroundColor;
+
+  }
+
+  @HostListener('click') onClick() {
+    this.isHighlighted = !this.isHighlighted;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
 @HostBinding('style.border') border:string=this.defaultColor;  
  
-  constructor( private eleRef:ElementRef){}  
+  // constructor( private eleRef:ElementRef){}  
   
   @HostListener('mouseover') mouseover(eventData:Event){  
       this.border=this.highlightColor;  
-     // this.eleRef.nativeElement.style.color="White";  
+  
   }  
  
   @HostListener('mouseleave') mouseleave(eventData:Event){  
       this.border=this.defaultColor;  
       //this.eleRef.nativeElement.style.color="Black";  
   } 
+
+
+
+
+
+
+
 }
 
   
