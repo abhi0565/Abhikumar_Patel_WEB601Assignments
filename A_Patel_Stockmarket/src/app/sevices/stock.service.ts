@@ -13,16 +13,17 @@ export class StockService {
 
 // retun stockdata array
   getContent(): Observable<Content[]> {
-    return of(stockdata);
+    console.log(stockdata);
+   return of(stockdata);
   }
 // searching in stockdata array
-   getContentItem(id: number): Observable<Content> {
-    for (var i = 0; i < stockdata.length; i++) {
-      if (stockdata[i].id === id) {
-        return of(stockdata[i]);
-      }
-    }
-   }
+  //  getContentItem(id: number): Observable<Content> {
+  //   for (var i = 0; i < stockdata.length; i++) {
+  //     if (stockdata[i].id === id) {
+  //       return of(stockdata[i]);
+  //     }
+  //   }
+  //  }
 
 //creat a new item to the array
    addContentItem(newContent: Content): Observable<Content[]> {
@@ -56,13 +57,17 @@ export class StockService {
       stockdata.forEach((value,index)=>{
           if(value.id == key)stockdata.splice(index,1);
   
-      });
+        });
+      }
+     console.log(RemoveElementFromArray(1));
+     // console.log(stockdata);
+      return of(stockdata);
   }
-  return of(stockdata);
-  }
-
 
 
 
 
 }
+
+
+
