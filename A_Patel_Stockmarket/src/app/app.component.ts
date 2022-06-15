@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Content} from './models/content';
-import{ContentListComponent} from './content-list/content-list.component'
+import{ContentListComponent} from './content-list/content-list.component';
+import { StockService } from './sevices/stock.service';
 
 
 @Component({
@@ -11,6 +12,10 @@ import{ContentListComponent} from './content-list/content-list.component'
 export class AppComponent {
   title = 'A_Patel_Stockmarket';
  
+
+
+
+
 }
 
 
