@@ -4,6 +4,7 @@ import{ContentListComponent} from './content-list/content-list.component';
 import { StockService } from './sevices/stock.service';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,11 +12,17 @@ import { StockService } from './sevices/stock.service';
 })
 export class AppComponent {
   title = 'A_Patel_Stockmarket';
- 
+  stockmarket: Content[];
+  constructor(private StockService: StockService) {
+    this.stockmarket = [];
+  }
+  ngOnInit(): void {}
 
+  serchstock(id: any) {
+  
 
-
-
+    
+}
 }
 
 

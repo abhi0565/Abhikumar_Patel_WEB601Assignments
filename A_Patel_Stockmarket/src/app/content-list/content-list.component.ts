@@ -23,7 +23,7 @@ export class ContentListComponent implements OnInit {
       this.stockdata = contentArrayFromService;
     });
     this.StockService.getContentItem(2).subscribe(contentList => {
-      console.log(contentList);
+     // console.log(contentList);
     });
 
     this.StockService.addContentItem({
@@ -37,7 +37,7 @@ export class ContentListComponent implements OnInit {
 
     }).subscribe((contentArrayFromService: Content[]) => {
       this.stockdata = contentArrayFromService;
-      console.log(contentArrayFromService)
+    //  console.log(contentArrayFromService)
     });
 
 
@@ -49,11 +49,11 @@ export class ContentListComponent implements OnInit {
       type: "xyz",
       hashtags: ["xyz"]
     }).subscribe(contentList => {
-      console.log(contentList);
+    //  console.log(contentList);
     });
 
       this.StockService.deleteContentItem(7).subscribe(() => (contentList: any) => {
-        console.log(contentList);
+     //   console.log(contentList);
       });
 
 
@@ -68,7 +68,7 @@ export class ContentListComponent implements OnInit {
     // let i = 0;
     //  return  console.log(inputvalue); 
     for(let i = 0;  i < this.stockdata.length; i++) {
-     console.log(this.stockdata[i].author);
+    // console.log(this.stockdata[i].author);
 
       // console.log(author.author)
       // console.log(inputvalue);
