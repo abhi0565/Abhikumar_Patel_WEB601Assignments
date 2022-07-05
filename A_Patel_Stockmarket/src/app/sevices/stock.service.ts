@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Content } from '../models/content';
 import { Observable, of } from 'rxjs';
-import { stockdata } from '../data/mock-stock';
+import { stockdata, DEFAULTSTOCKCONTENT } from '../data/mock-stock';
 
 @Injectable({
   providedIn: 'root'
@@ -23,10 +23,12 @@ export class StockService {
         // console.log(stockdata[id])
         return of(stockdata[id]);
       }
-  
+      
     }
     console.log(stockdata)
+    return of(DEFAULTSTOCKCONTENT);
     return of(stockdata[id]);
+  
   }
 //creat a new item to the array
    addContentItem(newContent: Content): Observable<Content[]> {

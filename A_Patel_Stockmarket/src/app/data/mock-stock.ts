@@ -1,5 +1,11 @@
 import { Content } from "../models/content";
 
+export const DEFAULTSTOCKCONTENT: Content = {
+  id: -1,
+  title: 'NOT FOUND',
+  author: "NOT VALID",
+  hashtags: []
+}
 export const stockdata: Content[] = [{
     id: 0,
     title: 'TATA MOTORS',
