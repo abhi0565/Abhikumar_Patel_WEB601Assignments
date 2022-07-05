@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { StocklistComponent } from './stocklist/stocklist.component';
 import { ContentListComponent } from './content-list/content-list.component';
+import { SearchstockComponent } from './searchstock/searchstock.component';
 
 
 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: "details/:id",
     component: StocklistComponent,
+  },
+  {
+    path: "search",
+    component: SearchstockComponent,
   }
 ];
 
