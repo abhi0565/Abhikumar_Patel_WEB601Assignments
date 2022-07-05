@@ -26,9 +26,9 @@ export class StockService {
       
     }
     console.log(stockdata)
-    return of(DEFAULTSTOCKCONTENT);
     return of(stockdata[id]);
-  
+    
+    
   }
 //creat a new item to the array
    addContentItem(newContent: Content): Observable<Content[]> {

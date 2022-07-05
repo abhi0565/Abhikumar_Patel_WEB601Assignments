@@ -12,7 +12,7 @@ import { Content } from '../models/content';
 export class SearchstockComponent implements OnInit {
 
 
-  item: Content = DEFAULTSTOCKCONTENT;
+  item: Content | undefined;
 
 
 
@@ -21,10 +21,10 @@ export class SearchstockComponent implements OnInit {
 
   ngOnInit(): void {
     // getContentItem test
-    this.StockService.getContentItem(1).subscribe(chessChampionsSingleItem => {
-      console.log("App component - Got the content item: ", chessChampionsSingleItem);
-      this.item = chessChampionsSingleItem;
-    });
+    // this.StockService.getContentItem(1).subscribe(chessChampionsSingleItem => {
+    //   console.log("App component - Got the content item: ", chessChampionsSingleItem);
+    //   this.item = chessChampionsSingleItem;
+    // });
 
   }
 
