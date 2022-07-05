@@ -1,1 +1,27 @@
-<p>stocklist works!</p>
+<ng-container *ngIf="contentItem">
+    <h2>
+      {{ contentItem.title }}
+    </h2>
+    <img *ngIf="contentItem" [src]="contentItem.imagelink">
+    <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
+      {{contentItem.body}}
+    </p>
+    <ng-template #elseBlockNameIsWhateverYouWant>
+      <p class="not-found">No body content found</p>
+    </ng-template>
+    <!-- Just using the enum for the switch case check -->
+    <!-- <ng-template [ngIf]="contentItem">
+      <div class="type" [ngSwitch]='contentItem.type'>
+        <span *ngSwitchCase="ChessPlayerTitleENUMValues.GM">Grand Master</span>
+        <span *ngSwitchCase='ChessPlayerTitleENUMValues.IM'>International Master</span>
+        <span *ngSwitchCase='ChessPlayerTitleENUMValues.FM'>FIDE Master</span>
+      </div>
+    </ng-template> -->
+    <!-- We can have another enum set for storing the title names themselves -->
+    <!-- <ng-template [ngIf]="contentItem">
+    <span>{{ ChessPlayerTitleName[(contentItem.type as string) || ""] }}</span>
+  </ng-template> -->
+    <!-- <h2 *ngIf="this.contentItem2">
+    {{ contentItem2.name }}
+  </h2> -->
+  </ng-container>
