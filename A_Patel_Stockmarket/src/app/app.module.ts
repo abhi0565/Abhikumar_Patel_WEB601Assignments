@@ -7,6 +7,7 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { StocksPipe } from './stocks.pipe';
 import { HighlightImportantDataDirective } from './highlight-important-data.directive';
+import { StocklistComponent } from './stocklist/stocklist.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HighlightImportantDataDirective } from './highlight-important-data.dire
     ContentListComponent,
     ContentCardComponent,
     StocksPipe,
-    HighlightImportantDataDirective
+    HighlightImportantDataDirective,
+    StocklistComponent
   ],
   imports: [
     BrowserModule,
