@@ -6,22 +6,16 @@
     <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
       {{contentItem.body}}
     </p>
+    <div class="type"  *ngIf="contentItem && contentItem.type else elseBlockNameIsWhateverYouWant" appHighlightImportantData   [highlightColor]="'2px solid black'" >{{contentItem?.type}}</div>
+    <p class="author" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">
+      {{contentItem.body}}
+    </p>
+    <div class="hashtags" *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant"> </div>
+
     <ng-template #elseBlockNameIsWhateverYouWant>
       <p class="not-found">No body content found</p>
     </ng-template>
-    <!-- Just using the enum for the switch case check -->
-    <!-- <ng-template [ngIf]="contentItem">
-      <div class="type" [ngSwitch]='contentItem.type'>
-        <span *ngSwitchCase="ChessPlayerTitleENUMValues.GM">Grand Master</span>
-        <span *ngSwitchCase='ChessPlayerTitleENUMValues.IM'>International Master</span>
-        <span *ngSwitchCase='ChessPlayerTitleENUMValues.FM'>FIDE Master</span>
-      </div>
-    </ng-template> -->
-    <!-- We can have another enum set for storing the title names themselves -->
-    <!-- <ng-template [ngIf]="contentItem">
-    <span>{{ ChessPlayerTitleName[(contentItem.type as string) || ""] }}</span>
-  </ng-template> -->
-    <!-- <h2 *ngIf="this.contentItem2">
-    {{ contentItem2.name }}
-  </h2> -->
+    
   </ng-container>
+
+  <a routerLink="/list/">Back to the list</a>
