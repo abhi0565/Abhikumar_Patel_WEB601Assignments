@@ -2,15 +2,16 @@
 <button  clickEvent()>Click me!</button> -->
 
 
-<h2 *ngIf="contentItem && contentItem.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData  [color]="'pink'">
+<!-- <a  routerLink="//0"> *ngIf="contentItem && contentItem.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData  [color]="'pink'">
     {{ contentItem?.title }}
-  </h2>
+</a> -->
+<a *ngIf="contentItem && contentItem.imagelink else elseBlock"  [routerLink] = "['/details', contentItem.id ]" routerLinkActive="active"  >{{ contentItem?.title }} </a>
   <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
   <img *ngIf="contentItem && contentItem.imagelink else elseBlock" [src]="contentItem.imagelink" (click)="myfun()">
-  <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">{{contentItem?.body}}</p>
+  <!-- <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">{{contentItem?.body}}</p> -->
 
   <div class="type"  *ngIf="contentItem && contentItem.type else elseBlockNameIsWhateverYouWant" appHighlightImportantData   [highlightColor]="'2px solid black'" >{{contentItem?.type}}</div>
-  <div class="author"  *ngIf="contentItem && contentItem.author else elseBlockNameIsWhateverYouWant">{{contentItem?.author}}</div>
+  <!-- <div class="author"  *ngIf="contentItem && contentItem.author else elseBlockNameIsWhateverYouWant">{{contentItem?.author}}</div> -->
  <!-- <div class="hastags"  *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant" appHighlightImportantData>{{contentItem?.hashtags}}</div> -->
 
  <div class="hashtags" *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant">
