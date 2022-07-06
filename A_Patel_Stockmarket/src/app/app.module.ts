@@ -9,6 +9,7 @@ import { HighlightImportantDataDirective } from './highlight-important-data.dire
 import { StocklistComponent } from './stocklist/stocklist.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchstockComponent } from './searchstock/searchstock.component';
+import { InvalidlinkComponent } from './invalidlink/invalidlink.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SearchstockComponent } from './searchstock/searchstock.component';
     StocksPipe,
     HighlightImportantDataDirective,
     StocklistComponent,
-    SearchstockComponent
+    SearchstockComponent,
+    InvalidlinkComponent
   ],
   imports: [
     BrowserModule,

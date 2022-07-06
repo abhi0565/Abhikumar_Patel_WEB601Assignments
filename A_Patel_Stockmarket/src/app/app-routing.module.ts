@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { StocklistComponent } from './stocklist/stocklist.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { SearchstockComponent } from './searchstock/searchstock.component';
-
+import { InvalidlinkComponent } from './invalidlink/invalidlink.component';
 
 
 const routes: Routes = [
@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: "search",
     component: SearchstockComponent,
+  }, 
+   {
+    path: "**",
+    component: InvalidlinkComponent,
   }
 ];
 
