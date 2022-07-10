@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchstockComponent } from './searchstock/searchstock.component';
 import { InvalidlinkComponent } from './invalidlink/invalidlink.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
