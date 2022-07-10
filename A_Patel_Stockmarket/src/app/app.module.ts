@@ -10,6 +10,7 @@ import { StocklistComponent } from './stocklist/stocklist.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchstockComponent } from './searchstock/searchstock.component';
 import { InvalidlinkComponent } from './invalidlink/invalidlink.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { InvalidlinkComponent } from './invalidlink/invalidlink.component';
     HighlightImportantDataDirective,
     StocklistComponent,
     SearchstockComponent,
-    InvalidlinkComponent
+    InvalidlinkComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
