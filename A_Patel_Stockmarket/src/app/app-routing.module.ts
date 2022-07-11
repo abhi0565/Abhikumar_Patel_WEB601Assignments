@@ -29,6 +29,10 @@ const routes: Routes = [
     path: "addContent",
     component: ChangeContentComponent,
   }, 
+  {
+    path: "updatecontent/:id",
+    component: ChangeContentComponent,
+  }, 
    {
     path: "**",
     component: InvalidlinkComponent,
