@@ -4,6 +4,7 @@ import { StocklistComponent } from './stocklist/stocklist.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { SearchstockComponent } from './searchstock/searchstock.component';
 import { InvalidlinkComponent } from './invalidlink/invalidlink.component';
+import { ChangeContentComponent } from './change-content/change-content.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: "search",
     component: SearchstockComponent,
+  }, 
+  {
+    path: "addContent",
+    component: ChangeContentComponent,
   }, 
    {
     path: "**",
