@@ -35,8 +35,8 @@ export class ContentListComponent implements OnInit {
       type: "abc",
       hashtags: ["abc"]
 
-    }).subscribe((contentArrayFromService: Content[]) => {
-      this.stockdata = contentArrayFromService;
+    }).subscribe((contentArrayFromService: Content) => {
+       contentArrayFromService;
     //  console.log(contentArrayFromService)
     });
 
@@ -52,9 +52,9 @@ export class ContentListComponent implements OnInit {
     //  console.log(contentList);
     });
 
-      this.StockService.deleteContentItem(7).subscribe(() => (contentList: any) => {
-     //   console.log(contentList);
-      });
+    //   this.StockService.deleteContentItem(7).subscribe(() => (contentList: any) => {
+    //  //   console.log(contentList);
+    //   });
 
 
 

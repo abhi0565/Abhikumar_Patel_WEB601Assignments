@@ -11,7 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchstockComponent } from './searchstock/searchstock.component';
 import { InvalidlinkComponent } from './invalidlink/invalidlink.component';
 import { NavbarComponent } from './navbar/navbar.component';
- import { InMemoryDataService } from './services/in-memory-data.service';
+import { HttpClientModule } from "@angular/common/http";
+import { InMemoryDataService } from './services/in-memory-data.service';
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 
 
 @NgModule({
@@ -30,6 +32,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
