@@ -1,1 +1,25 @@
-<p>change-content works!</p>
+<h1> you are going to add new contetn</h1>
+  <label>
+    title:
+    <input [(ngModel)]="contentItem.title">
+  </label><br>
+  <label>
+    body:
+    <input [(ngModel)]="contentItem.body">
+  </label><br>
+  <label>
+    author:
+    <input [(ngModel)]="contentItem.author">
+  </label><br>
+  <label>
+    imagelink:
+    <textarea [(ngModel)]="contentItem.imagelink"></textarea>
+  </label><br>
+  <label>
+    Tags:
+    <input [(ngModel)]="tempTags">
+  </label>
+  <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+    Add new content
+  </button>
+  
