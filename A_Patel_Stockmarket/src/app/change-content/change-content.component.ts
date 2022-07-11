@@ -28,6 +28,7 @@ export class ChangeContentComponent implements OnInit {
       .subscribe(newContentFromServer =>
         console.log("Success! New content added", newContentFromServer)
       );
+      
   }
   updateContentOnServer(): void {
     this.contentItem.hashtags = this.tempTags.split(", ");
