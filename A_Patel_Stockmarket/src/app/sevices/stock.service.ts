@@ -56,7 +56,7 @@ export class StockService {
       }
   
 
-      updateContentItem(contentItem: Content): Observable<Content[]> {
+      updateContentItem(contentItem: Content): Observable<any> {
       //let  Update = {id: 1 , title:'',hashtags:[],body:'',author:'',type:''};
     //   stockdata.forEach(item =>{
     //     if( item.id == newContent.id){
@@ -80,11 +80,7 @@ export class StockService {
   //     }
   //     // RemoveElementFromArray(1);
   //     return of(stockdata);
-  //   }
-    
-    
-    
-    
+  //   } 
   }
   
 

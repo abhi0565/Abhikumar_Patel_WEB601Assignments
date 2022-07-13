@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/internal/Subscription';
 import { Content } from '../models/content';
 import { StockService } from '../sevices/stock.service';
 
@@ -11,16 +13,34 @@ export class ChangeContentComponent implements OnInit {
   contentItem: Content = {
     title: "",
     body: "",
-    id: null,
-    author: '',
-    type:'',
+    author: "",
     hashtags: []
   };
+  id?: number;
   tempTags: string = '';
-  constructor(private StockService: StockService) { }
+  private routeSub!: Subscription;
+  
+  constructor(private StockService: StockService,private route: ActivatedRoute) {
+    this.routeSub = this.route.params.subscribe(params => {
+      console.log(params) //log the entire params object
+      console.log(params['id']) //log the value of id
+     this.contentItem.id = +params['id']
+});
 
+
+   }
   ngOnInit(): void {
+ 
+
+    
   }
+
+
+    
+
+  
+ 
+
 
   addContentToServer(): void {
     this.contentItem.hashtags = this.tempTags.split(", ");

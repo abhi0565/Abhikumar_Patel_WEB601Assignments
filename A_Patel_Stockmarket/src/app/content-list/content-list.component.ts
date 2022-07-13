@@ -26,31 +26,31 @@ export class ContentListComponent implements OnInit {
      // console.log(contentList);
     });
 
-    this.StockService.addContentItem({
+    // this.StockService.addContentItem({
 
-      id: 7,
-      title: 'abc',
-      body: "abc",
-      author: "abc",
-      type: "abc",
-      hashtags: ["abc"]
+    //   id: 7,
+    //   title: 'abc',
+    //   body: "abc",
+    //   author: "abc",
+    //   type: "abc",
+    //   hashtags: ["abc"]
 
-    }).subscribe((contentArrayFromService: Content) => {
-       contentArrayFromService;
-    //  console.log(contentArrayFromService)
-    });
+    // }).subscribe((contentArrayFromService: Content) => {
+    //    contentArrayFromService;
+    // //  console.log(contentArrayFromService)
+    // });
 
 
-    this.StockService.updateContentItem({
-      id: 3,
-      title: 'xyz',
-      body: "xyz",
-      author: "xyz",
-      type: "xyz",
-      hashtags: ["xyz"]
-    }).subscribe(contentList => {
-    //  console.log(contentList);
-    });
+    // this.StockService.updateContentItem({
+    //   id: 3,
+    //   title: 'xyz',
+    //   body: "xyz",
+    //   author: "xyz",
+    //   type: "xyz",
+    //   hashtags: ["xyz"]
+    // }).subscribe(contentList => {
+    // //  console.log(contentList);
+    // });
 
     //   this.StockService.deleteContentItem(7).subscribe(() => (contentList: any) => {
     //  //   console.log(contentList);

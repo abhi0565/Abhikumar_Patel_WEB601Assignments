@@ -20,15 +20,15 @@
 
 
 
- <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
+ <!-- <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
     <app-content-card *ngIf="item.type=='auto'" [contentItem]="item" 
     class="chess-player-{{i}}" class="all">
   </app-content-card>
 
-  </div>
+  </div> -->
 
- <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
+ <!-- <div *ngFor="let item of (stockdata | stocks); index as i; first as isFirst; odd as odd; even as even;" >
 
     <app-content-card *ngIf="item.type=='all'" [contentItem]="item" 
     class="chess-player-{{i}}" class="all">
@@ -56,9 +56,16 @@
     class="chess-player-{{i}}" class="not">
   </app-content-card>
 
+  </div> -->
+
+
+  <div *ngFor="let item of (stockdata); index as i; first as isFirst; odd as odd; even as even;" >
+
+    <app-content-card  [contentItem]="item" 
+    class="chess-player-{{i}}" class="not">
+  </app-content-card>
+
   </div>
-
-
 
 
 
