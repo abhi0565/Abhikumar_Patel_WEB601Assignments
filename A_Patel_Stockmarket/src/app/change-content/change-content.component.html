@@ -1,4 +1,9 @@
-<h1> you are going to add new contetnt</h1>
+<div *ngIf="!contentItem.id">
+   <h1>you are going to add data</h1>
+ </div>
+<div *ngIf="contentItem.id">
+   <h1>you are going to update the data</h1>
+ </div>
   <label>
     title:
     <input [(ngModel)]="contentItem.title">
@@ -19,7 +24,12 @@
     Tags:
     <input [(ngModel)]="tempTags">
   </label>
-  <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+
+  <div *ngIf="contentItem.id"> <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+      updat content
+  </button></div>
+  <div *ngIf="!contentItem.id"> <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
     Add new content
-  </button>
+  </button></div>
+ 
   
