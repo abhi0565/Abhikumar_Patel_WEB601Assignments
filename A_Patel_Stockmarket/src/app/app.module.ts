@@ -16,7 +16,8 @@ import { InMemoryDataService } from './services/in-memory-data.service';
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { ChangeContentComponent } from './change-content/change-content.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       delay: 1000,
     }),
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule
 
   ],
   providers: [],

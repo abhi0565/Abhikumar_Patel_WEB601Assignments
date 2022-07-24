@@ -4,31 +4,45 @@
 <div *ngIf="contentItem.id">
    <h1>you are going to update the data</h1>
  </div>
-  <label>
+ <mat-form-field color="primary" appearance="fill">
+   <mat-form-field color="primary" appearance="fill">
+  <mat-label>
     title:
-    <input [(ngModel)]="contentItem.title">
-  </label><br>
-  <label>
+    <input matInput [(ngModel)]="contentItem.title">
+  </mat-label><br>
+</mat-form-field>
+
+ <mat-form-field color="primary" appearance="fill">
+  <mat-label>
     body:
-    <input [(ngModel)]="contentItem.body">
-  </label><br>
-  <label>
+    <input matInput [(ngModel)]="contentItem.body">
+  </mat-label><br>
+  </mat-form-field>
+
+   <mat-form-field color="primary" appearance="fill">
+  <mat-label>
     author:
-    <input [(ngModel)]="contentItem.author">
-  </label><br>
-  <label>
+    <input matInput [(ngModel)]="contentItem.author">
+  </mat-label><br>
+  </mat-form-field>
+
+   <mat-form-field color="primary" appearance="fill">
+  <mat-label>
     imagelink:
     <textarea [(ngModel)]="contentItem.imagelink"></textarea>
-  </label><br>
-  <label>
-    Tags:
-    <input [(ngModel)]="tempTags">
-  </label>
+  </mat-label><br>
+  </mat-form-field>
 
-  <div *ngIf="contentItem.id"> <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
-      updat content
+   <mat-form-field color="primary" appearance="fill">
+  <mat-label>
+    Tags:
+    <input matInput [(ngModel)]="tempTags">
+  </mat-label>
+  </mat-form-field>
+  <div *ngIf="contentItem.id"> <button  mat-raised-button color="primary" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+      update content
   </button></div>
-  <div *ngIf="!contentItem.id"> <button (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+  <div *ngIf="!contentItem.id"> <button  mat-raised-button color="primary" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
     Add new content
   </button></div>
  
