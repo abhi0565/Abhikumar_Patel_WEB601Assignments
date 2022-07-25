@@ -3,47 +3,36 @@
  </div>
 <div *ngIf="contentItem.id">
    <h1>you are going to update the data</h1>
- </div>
- <mat-form-field color="primary" appearance="fill">
-   <mat-form-field color="primary" appearance="fill">
-  <mat-label>
-    title:
-    <input matInput [(ngModel)]="contentItem.title">
-  </mat-label><br>
+ </div><mat-form-field color="primary" appearance="fill">
+  <mat-label>Title:</mat-label>
+  <input matInput [(ngModel)]="contentItem.title" name="title">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Type:</mat-label>
+  <input matInput [(ngModel)]="contentItem.type" name="type">
 </mat-form-field>
 
- <mat-form-field color="primary" appearance="fill">
-  <mat-label>
-    body:
-    <input matInput [(ngModel)]="contentItem.body">
-  </mat-label><br>
-  </mat-form-field>
-
-   <mat-form-field color="primary" appearance="fill">
-  <mat-label>
-    author:
-    <input matInput [(ngModel)]="contentItem.author">
-  </mat-label><br>
-  </mat-form-field>
-
-   <mat-form-field color="primary" appearance="fill">
-  <mat-label>
-    imagelink:
-    <textarea [(ngModel)]="contentItem.imagelink"></textarea>
-  </mat-label><br>
-  </mat-form-field>
-
-   <mat-form-field color="primary" appearance="fill">
-  <mat-label>
-    Tags:
-    <input matInput [(ngModel)]="tempTags">
-  </mat-label>
-  </mat-form-field>
-  <div *ngIf="contentItem.id"> <button  mat-raised-button color="primary" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Author:</mat-label>
+  <input matInput [(ngModel)]="contentItem.author" name="author">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Image URL:</mat-label>
+  <input matInput [(ngModel)]="contentItem.imagelink" name="imageLink">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Body:</mat-label>
+  <input matInput [(ngModel)]="contentItem.body" name="body">
+</mat-form-field>
+<mat-form-field color="primary" appearance="fill">
+  <mat-label>Tags:</mat-label>
+  <input matInput [(ngModel)]="tempTags" name="hashtags">
+</mat-form-field>
+  <div *ngIf="contentItem.id"> <mat-button-toggle color="primary" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() " >
       update content
-  </button></div>
-  <div *ngIf="!contentItem.id"> <button  mat-raised-button color="primary" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+  </mat-button-toggle></div>
+  <div *ngIf="!contentItem.id"> <mat-button-toggle   color="primary" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer() " >
     Add new content
-  </button></div>
+  </mat-button-toggle></div>
  
   
