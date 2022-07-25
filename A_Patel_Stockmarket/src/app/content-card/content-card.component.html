@@ -5,12 +5,15 @@
 <!-- <a  routerLink="//0"> *ngIf="contentItem && contentItem.title else elseBlockNameIsWhateverYouWant" appHighlightImportantData  [color]="'pink'">
     {{ contentItem?.title }}
 </a> -->
-<a *ngIf="contentItem && contentItem.imagelink else elseBlock"  [routerLink] = "['/details', contentItem.id ]" routerLinkActive="active"  >{{ contentItem?.title }} </a>
+<mat-card>
+  <mat-card-header>
+  
+  <a *ngIf="contentItem && contentItem.imagelink else elseBlock"  [routerLink] = "['/details', contentItem.id ]" routerLinkActive="active"  >{{ contentItem.title }} </a>
   <!-- <img *ngIf="contentItem" src="{{contentItem.imageUrl}}"> -->
   <img *ngIf="contentItem && contentItem.imagelink else elseBlock" [src]="contentItem.imagelink" (click)="myfun()">
   <!-- <p class="body" *ngIf="contentItem && contentItem.body; else elseBlockNameIsWhateverYouWant">{{contentItem?.body}}</p> -->
-
-  <div class="type"  *ngIf="contentItem && contentItem.type else elseBlockNameIsWhateverYouWant" appHighlightImportantData   [highlightColor]="'2px solid black'" >{{contentItem?.type}}</div>
+</mat-card-header>
+  <mat-card-subtitle class="type"  *ngIf="contentItem && contentItem.type else elseBlockNameIsWhateverYouWant" appHighlightImportantData   [highlightColor]="'2px solid black'" >{{contentItem.type}}</mat-card-subtitle>
   <!-- <div class="author"  *ngIf="contentItem && contentItem.author else elseBlockNameIsWhateverYouWant">{{contentItem?.author}}</div> -->
  <!-- <div class="hastags"  *ngIf="contentItem && contentItem.hashtags else elseBlockNameIsWhateverYouWant" appHighlightImportantData>{{contentItem?.hashtags}}</div> -->
 
@@ -32,3 +35,4 @@
   <ng-template #elseBlockNameIsWhateverYouWant>
     <p> not found</p>
   </ng-template>
+</mat-card>
